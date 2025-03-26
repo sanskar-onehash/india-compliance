@@ -21,7 +21,7 @@ execute:from india_compliance.audit_trail.setup import setup_fixtures; setup_fix
 india_compliance.patches.v14.set_default_for_audit_trail_notification
 india_compliance.patches.post_install.update_state_name_to_puducherry
 india_compliance.patches.post_install.rename_import_of_capital_goods
-execute:from india_compliance.audit_trail.setup import create_custom_fields, CUSTOM_FIELDS; create_custom_fields(CUSTOM_FIELDS)
+execute:from india_compliance.audit_trail.setup import create_custom_fields; create_custom_fields()
 india_compliance.patches.post_install.update_hsn_code
 execute:from india_compliance.gst_india.setup import map_default_uoms; map_default_uoms()
 india_compliance.patches.v14.rename_reverse_charge_to_purchase_reverse_charge
@@ -70,6 +70,6 @@ india_compliance.patches.v15.set_default_for_new_gst_category_notification
 india_compliance.patches.v15.make_e_invoice_log_extensible
 india_compliance.patches.v15.migrate_boe_taxes_to_ic_taxes
 india_compliance.patches.v15.set_download_document_for_2a_2b
-india_compliance.patches.v15.multiple_pi_in_boe
+#india_compliance.patches.v15.multiple_pi_in_boe # there is no field named purchase invoice in `Bill of Entry`
 india_compliance.patches.v15.update_supplier_filing_status
 india_compliance.patches.v14.set_pending_boe_qty
